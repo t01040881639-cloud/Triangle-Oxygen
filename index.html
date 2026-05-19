@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 팀 프로젝트 - 메인</title>
+    <style>
+        /* 기초 스타일 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* 팀원 카드 컨테이너 */
+        .team-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        /* 개별 팀원 div (카드 스타일) */
+        .member-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4A90E2;
+            margin-bottom: 10px;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 팀 프로젝트 멤버 소개</h1>
+
+    <section id="section-hangyeol" class="team-section">
+        <div class="team-container">
+            <div id="hangyeol" class="member-card">
+                <div class="member-name">한결</div>
+                <p class="role">Team Member</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-gyeongbin" class="kyungbin-exclusive-section" style="margin-top: 50px; width: 100%;">
+        <div class="container">
+            <header class="section-header">
+                <p class="label">P R O F I L E</p>
+                <h2 class="title">ABOUT <span class="highlight">경빈</span></h2>
+            </header>
+            <div class="cards-wrapper">
+                <div class="member-card" style="--order: 1;">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-hyeonmin" class="team-section">
+        <div class="team-container">
+            <div id="hyeonmin" class="member-card">
+                <div class="member-name">현민</div>
+                <p class="role">Team Member</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-wooseok" class="team-section">
+        <div class="team-container">
+            <div id="wooseok" class="member-card">
+                <div class="member-name">우석</div>
+                <p class="role">Team Member</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
