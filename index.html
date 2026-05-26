@@ -1,110 +1,271 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우리 팀 프로젝트 - 메인</title>
-    <style>
-        /* 기초 스타일 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-        }
-
-        h1 {
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        /* 팀원 카드 컨테이너 */
-        .team-container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1200px;
-        }
-
-        /* 개별 팀원 div (카드 스타일) */
-        .member-card {
-            background-color: white;
-            border-radius: 12px;
-            padding: 30px;
-            width: 200px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .member-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .member-name {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #4A90E2;
-            margin-bottom: 10px;
-        }
-
-        .role {
-            font-size: 0.9rem;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expert Lecture Series</title>
+  <link rel="stylesheet" href="co.css">
+  <link rel="stylesheet" href="section1.css">
+  <link rel="stylesheet" href="section2.css">
+  <link rel="stylesheet" href="section3.css">
+  <link rel="stylesheet" href="section4.css">
 </head>
 <body>
 
-    <h1>프로젝트 멤버 소개</h1>
+  <!-- =============== [1구간] 정경빈 담당 =============== -->
 
-    <section id="section-hangyeol" class="team-section">
-        <div class="team-container">
-            <div id="hangyeol" class="member-card">
-                <div class="member-name">한결</div>
-                <p class="role">Team Member</p>
-            </div>
-        </div>
+  <nav>
+    <span class="logo">TEAM</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#instructors">강사진</a></li>
+      <li><a href="#courses">코스</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="hero">
+      <p class="hero-label">EXPERT LECTURE SERIES</p>
+      <h1>배움을 넘어<br><span>경험을 나눕니다</span></h1>
+      <p>각 분야 최고의 전문가들이 실전 경험을 바탕으로<br>당신의 성장을 함께합니다</p>
+      <a href="#courses" class="btn">강좌 보러가기</a>
     </section>
 
-    <section id="section-gyeongbin" class="kyungbin-exclusive-section" style="margin-top: 50px; width: 100%;">
-        <div class="container">
-            <header class="section-header">
-                <p class="label">P R O F I L E</p>
-                <h2 class="title">ABOUT <span class="highlight">경빈</span></h2>
-            </header>
-            <div class="cards-wrapper">
-                <div class="member-card" style="--order: 1;">
-                    </div>
-            </div>
+    <section id="about">
+      <div class="about-inner">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="팀 협업 이미지">
         </div>
+        <div class="about-text">
+          <div class="qa-item">
+            <h3>Who are you?</h3>
+            <p>각 분야의 전문가들</p>
+          </div>
+          <div class="qa-item">
+            <h3>What do you do?</h3>
+            <p>실전 경험을 공유합니다</p>
+          </div>
+          <div class="qa-item">
+            <h3>Who is it for?</h3>
+            <p>성장을 원하는 모든 이들</p>
+          </div>
+          <p class="desc">우리는 단순히 지식을 전달하는 것을 넘어, 각자의 분야에서 쌓아온 실전 경험과 노하우를 공유합니다.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="section-hyeonmin" class="team-section">
-        <div class="team-container">
-            <div id="hyeonmin" class="member-card">
-                <div class="member-name">현민</div>
-                <p class="role">Team Member</p>
-            </div>
+
+  <!-- =============== [2구간] 유현민 담당 =============== -->
+
+    <section id="instructors">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Who makes it?</h2>
+          <p>Why do I need it? How will it make my life better?</p>
         </div>
+
+        <div class="instructor-grid">
+
+          <div class="instructor-card">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" alt="정경빈 강사">
+            </div>
+            <h3 class="card-name">정경빈</h3>
+            <p class="card-desc">비즈니스 세계에서 성공하기 위한 태도와 마인드셋</p>
+            <div class="card-tags">
+              <span class="tag">비즈니스</span>
+              <span class="tag">에티튜드</span>
+              <span class="tag">프로페셔널</span>
+            </div>
+          </div>
+
+          <div class="instructor-card">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400" alt="유현민 강사">
+            </div>
+            <h3 class="card-name">유현민</h3>
+            <p class="card-desc">당신의 매력을 극대화하는 비주얼 브랜딩</p>
+            <div class="card-tags">
+              <span class="tag">셀프 브랜딩</span>
+              <span class="tag">사진학</span>
+              <span class="tag">매력</span>
+            </div>
+          </div>
+
+          <div class="instructor-card">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400" alt="이한결 강사">
+            </div>
+            <h3 class="card-name">이한결</h3>
+            <p class="card-desc">소셜 미디어를 매거진처럼 운영하는 전략</p>
+            <div class="card-tags">
+              <span class="tag">인스타그램</span>
+              <span class="tag">매거진</span>
+              <span class="tag">소셜 미디어</span>
+            </div>
+          </div>
+
+          <div class="instructor-card">
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=400" alt="김우석 강사">
+            </div>
+            <h3 class="card-name">김우석</h3>
+            <p class="card-desc">극한의 경험을 통해 배우는 물리학의 법칙</p>
+            <div class="card-tags">
+              <span class="tag">스카이다이빙</span>
+              <span class="tag">물리</span>
+              <span class="tag">익스트림</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="quote">
+          <p>"진짜 배움은 이론이 아닌 경험에서 시작됩니다. 우리가 걸어온 길을 여러분과 함께 나눕니다."</p>
+        </div>
+
+      </div>
     </section>
 
-    <section id="section-wooseok" class="team-section">
-        <div class="team-container">
-            <div id="wooseok" class="member-card">
-                <div class="member-name">우석</div>
-                <p class="role">Team Member</p>
-            </div>
+
+  <!-- =============== [3구간] 이한결 담당 =============== -->
+
+    <section id="courses">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>What is it?</h2>
+          <p>How do I get started? What will I learn?</p>
         </div>
+
+        <div class="course-grid">
+
+          <div class="course-card">
+            <p class="course-index">01</p>
+            <div class="course-icon">💼</div>
+            <h3 class="course-title">비즈니스 에티튜드</h3>
+            <p class="course-instructor">강사: 정경빈</p>
+            <p class="course-desc">전문가로서의 태도와 마인드셋을 완성하는 비즈니스 필수 과정</p>
+            <div class="course-meta">
+              <span>기간: 8주</span>
+              <div class="divider"></div>
+              <span>레벨: 입문-중급</span>
+            </div>
+            <div class="course-tags">
+              <span class="tag">비즈니스</span>
+              <span class="tag">커리어</span>
+              <span class="tag">마인드셋</span>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <p class="course-index">02</p>
+            <div class="course-icon">📸</div>
+            <h3 class="course-title">매력적인 셀프 브랜딩 사진학</h3>
+            <p class="course-instructor">강사: 유현민</p>
+            <p class="course-desc">나만의 브랜드를 시각적으로 표현하는 사진 촬영과 연출의 모든 것</p>
+            <div class="course-meta">
+              <span>기간: 6주</span>
+              <div class="divider"></div>
+              <span>레벨: 입문</span>
+            </div>
+            <div class="course-tags">
+              <span class="tag">사진</span>
+              <span class="tag">브랜딩</span>
+              <span class="tag">비주얼</span>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <p class="course-index">03</p>
+            <div class="course-icon">📱</div>
+            <h3 class="course-title">인스타그램 매거진 소셜 어카운트</h3>
+            <p class="course-instructor">강사: 이한결</p>
+            <p class="course-desc">소셜 미디어를 매거진처럼 운영하는 전략적 콘텐츠 제작법</p>
+            <div class="course-meta">
+              <span>기간: 6주</span>
+              <div class="divider"></div>
+              <span>레벨: 입문-중급</span>
+            </div>
+            <div class="course-tags">
+              <span class="tag">소셜미디어</span>
+              <span class="tag">콘텐츠</span>
+              <span class="tag">전략</span>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <p class="course-index">04</p>
+            <div class="course-icon">🪂</div>
+            <h3 class="course-title">스카이다이빙의 물리</h3>
+            <p class="course-instructor">강사: 김우석</p>
+            <p class="course-desc">자유낙하의 과학적 원리를 이해하고 안전하게 도전하는 법</p>
+            <div class="course-meta">
+              <span>기간: 10주</span>
+              <div class="divider"></div>
+              <span>레벨: 중급-고급</span>
+            </div>
+            <div class="course-tags">
+              <span class="tag">스카이다이빙</span>
+              <span class="tag">물리학</span>
+              <span class="tag">익스트림</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="features">
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <h4>실전 중심 커리큘럼</h4>
+            <p>이론보다 실전, 현장에서 바로 쓸 수 있는 내용만</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <h4>1:1 피드백</h4>
+            <p>강사와의 직접 소통을 통한 맞춤형 성장</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <h4>평생 커뮤니티</h4>
+            <p>수료 후에도 계속되는 네트워킹과 협업</p>
+          </div>
+        </div>
+
+      </div>
     </section>
+
+
+  <!-- =============== [4구간] 김우석 담당 =============== -->
+
+    <section id="closing">
+      <div class="container">
+        <p class="closing-label">GET STARTED TODAY</p>
+        <h2>지금 바로<br><span>시작하세요</span></h2>
+        <p>당신의 성장을 기다리고 있습니다.<br>전문가의 경험이 여러분의 것이 됩니다.</p>
+        <div class="btn-group">
+          <a href="#courses" class="btn-primary">강좌 신청하기</a>
+          <a href="#instructors" class="btn-secondary">강사 소개 보기</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">TEAM</span>
+      <div class="footer-members">
+        <span>정경빈 — 비즈니스 에티튜드</span>
+        <span>유현민 — 셀프 브랜딩 사진학</span>
+        <span>이한결 — 인스타그램 매거진</span>
+        <span>김우석 — 스카이다이빙의 물리</span>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Team Project. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
