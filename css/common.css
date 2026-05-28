@@ -249,23 +249,26 @@ nav ul a:hover {
   #about { padding: 128px 96px; }
 }
 
-/* ===================== [2구간] 정경빈: WHO MAKES IT ===================== */
+/* ===================== [2구간] 정경빈  ===================== */
 
-/* --- 자동 반복 float 애니메이션 --- */
+/*float*/
+
 @keyframes floatUp {
   0%   { transform: translateY(0px); }
   50%  { transform: translateY(-14px); }
   100% { transform: translateY(0px); }
 }
 
-/* --- SECTION --- */
+/*SECTION*/
+
 #instructors {
   padding: 80px 24px;
   border-top: 1px solid var(--white-10);
   text-align: center;
 }
 
-/* --- GRID --- */
+/*GRID*/
+
 #instructors .instructor-grid {
   display: flex;
   gap: 32px;
@@ -281,7 +284,8 @@ nav ul a:hover {
   cursor: pointer;
 }
 
-/* --- 카드별 float 애니메이션 (딜레이 스태거) --- */
+/*카드별 float*/
+
 #instructors .instructor-card:nth-child(1) {
   animation: floatUp 3.5s ease-in-out infinite;
   animation-delay: 0s;
@@ -302,7 +306,8 @@ nav ul a:hover {
   animation-delay: 1.8s;
 }
 
-/* --- 사진 영역 --- */
+/*사진 영역*/
+
 #instructors .card-img {
   position: relative;
   overflow: hidden;
@@ -337,7 +342,8 @@ nav ul a:hover {
   transform: scale(1.08);
 }
 
-/* --- 이름 --- */
+/*이름*/
+
 #instructors .card-name {
   font-size: 28px;
   font-weight: 700;
@@ -350,7 +356,8 @@ nav ul a:hover {
   color: var(--green);
 }
 
-/* --- 설명 --- */
+/*설명*/
+
 #instructors .card-desc {
   font-size: 14px;
   color: var(--white-60);
@@ -358,7 +365,8 @@ nav ul a:hover {
   margin-bottom: 16px;
 }
 
-/* --- 태그 그룹 --- */
+/*태그 그룹*/
+
 #instructors .card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -371,7 +379,8 @@ nav ul a:hover {
   color: var(--green);
 }
 
-/* --- 인용구 --- */
+/*인용구*/
+
 #instructors .quote {
   margin-top: 80px;
   padding-left: 32px;
@@ -389,7 +398,8 @@ nav ul a:hover {
   line-height: 1.6;
 }
 
-/* --- 반응형 --- */
+/*반응형 구조*/
+
 @media screen and (max-width: 767px) {
   #instructors .instructor-grid {
     flex-direction: column;
