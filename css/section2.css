@@ -1,0 +1,178 @@
+/* ===================== [2구간] 정경빈: WHO MAKES IT ===================== */
+
+/* --- 카드 float 반복 애니메이션 --- */
+@keyframes floatUp {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-14px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- 인용구 스크롤 등장 애니메이션 ---
+   튜토리얼의 fadeIn/popIn 패턴을 응용:
+   translateY(40px) → 0 + opacity 0 → 1, cubic-bezier로 자연스러운 안착 */
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- SECTION --- */
+#instructors {
+  padding: 80px 24px;
+  border-top: 1px solid var(--white-10);
+  text-align: center;
+}
+
+/* --- GRID --- */
+#instructors .instructor-grid {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#instructors .instructor-card {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* --- 카드별 float 애니메이션 (stagger delay) --- */
+#instructors .instructor-card:nth-child(1) {
+  animation: floatUp 3.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+#instructors .instructor-card:nth-child(2) {
+  animation: floatUp 3.9s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+#instructors .instructor-card:nth-child(3) {
+  animation: floatUp 4.3s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+#instructors .instructor-card:nth-child(4) {
+  animation: floatUp 4.7s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+/* --- 사진 영역 --- */
+#instructors .card-img {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--white-10);
+  margin-bottom: 24px;
+  transition: border-color 0.3s;
+}
+
+#instructors .card-img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#instructors .card-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, var(--bg), transparent);
+  opacity: 0.6;
+}
+
+#instructors .instructor-card:hover .card-img {
+  border-color: var(--green-50);
+}
+
+#instructors .instructor-card:hover .card-img img {
+  transform: scale(1.08);
+}
+
+/* --- 이름 --- */
+#instructors .card-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+#instructors .instructor-card:hover .card-name {
+  color: var(--green);
+}
+
+/* --- 설명 --- */
+#instructors .card-desc {
+  font-size: 14px;
+  color: var(--white-60);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* --- 태그 그룹 --- */
+#instructors .card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+#instructors .instructor-card:hover .tag {
+  border-color: var(--green-50);
+  color: var(--green);
+}
+
+/* --- 인용구 (기본: 숨김 상태) --- */
+#instructors .quote {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  border-left: 4px solid var(--green);
+  max-width: 800px;
+  text-align: left;
+  opacity: 0;
+}
+
+/* --- 인용구 (스크롤로 뷰포트 진입 시 .visible 클래스 추가됨) --- */
+#instructors .quote.visible {
+  animation: slideUpIn 0.9s cubic-bezier(0.34, 1.2, 0.64, 1) both;
+}
+
+#instructors .quote p {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.90);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* --- 반응형 --- */
+@media screen and (max-width: 767px) {
+  #instructors .instructor-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #instructors .instructor-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #instructors .quote p { font-size: 20px; }
+}
+
+@media screen and (min-width: 1024px) {
+  #instructors { padding: 128px 96px; }
+}
